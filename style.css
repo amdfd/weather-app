@@ -7,7 +7,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 120%;
   background: #222;
-  /* background-image: url("https://source.unsplash.com/1920x1080/?landscape"); */
+  background-image: url("https://source.unsplash.com/1920x1080/?landscape");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -65,10 +65,24 @@ input.search-bar {
 .flex {
   display: flex;
   align-items: center;
-
 }
 
 .description {
   text-transform: capitalize;
   margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 20px;
 }
